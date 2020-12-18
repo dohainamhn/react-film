@@ -1,0 +1,16 @@
+.loadding{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    i{
+        font-size: 4rem;
+        animation: 1s identifier infinite linear forwards  ;
+        @keyframes identifier {
+            to{
+                transform: rotate(360deg);
+            }
+        }
+    }
+}

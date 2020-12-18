@@ -1,0 +1,2 @@
+get all Film: /films/query
+get one Film: /films/:id

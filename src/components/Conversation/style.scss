@@ -1,0 +1,137 @@
+.conversation{
+    margin-bottom: 50px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    &__title{
+        color: #cdcdcd;
+        font-size: 20px;
+        padding: 10px;
+        font-weight: 700;
+        text-align: center;    
+    }
+    &__chatBox{
+        max-height: 500px;
+        overflow-y: scroll;
+        &__item{
+            &__inner{
+                display: flex;
+                margin: 0 5px;
+                padding: 10px 0;
+                border-top: 1px solid rgba(255, 255, 255, 0.1);
+                &__avatar{
+                    img{
+                        width: 3.5rem;
+                    }
+                }
+                &__info{
+                    margin-left: 5px;
+                    flex-grow: 1;
+                    &__sender{
+                        color: #8a8af2;
+                    }
+                    &__content{
+                        color: rgba(255,255,255,0.8);
+                        word-break: break-word;
+                    }
+                    &__img{
+                        display: flex;
+                        justify-content: center;
+                        img{
+                            border-radius: 3px;
+                            width: 100px;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+    }::-webkit-scrollbar{
+        display: none;
+    }
+    &__inputChat{
+        &__imageUploaded{
+            background-color: #3c3c3c;
+            &__item{
+                width: max-content;
+                position: relative;
+                padding: 5px;
+                i{
+                    left: calc(100% - 15px) ;
+                    position: absolute;
+                    font-size: 12px;
+                    color: #ffff;
+                }
+            }
+            img{
+                width: 50px;
+            }
+        }
+        &__form{
+            display: flex;
+            align-items: center;
+            padding: 5px 5px;
+            background-color: rgb(71, 71, 71);
+            input{
+                border: none;
+                outline: none;
+                color: #ffff;
+                width: 100%;
+                background-color: transparent;
+            }
+            label{
+                margin:0 5px;
+            }
+            &__icon{
+                position: relative;
+                .popupIconChat{
+                    visibility: hidden;
+                    width: 250px;
+                    position: absolute;
+                    opacity: 0;
+                    transition: 0.5s all;
+                    background-color: #555;
+                    color: #fff;
+                    border-radius: 6px;
+                    padding: 10px 2px;
+                    position: absolute;
+                    z-index: 1;
+                    bottom: 165%;
+                    left: -208px;
+                    table{
+                        width: 100%;
+                        tbody{
+                            width: 100%;
+                            tr{
+                                display: flex;
+                                justify-content: space-around;
+                            }
+                        }
+                    }
+                    ::after{
+                        content: "";
+                        position: absolute;
+                        top: 100%;
+                        left: 86%;
+                        margin-left: -5px;
+                        border-width: 5px;
+                        border-style: solid;
+                        border-color: #555 transparent transparent transparent;
+                    }
+                }::after{
+                    content: "";
+                        position: absolute;
+                        top: 100%;
+                        left: 86%;
+                        margin-left: -5px;
+                        border-width: 5px;
+                        border-style: solid;
+                        border-color: #555 transparent transparent transparent;
+                }
+            }
+        }
+    }
+}
+.visiblePopup{
+    opacity: 1 !important;
+    visibility: visible !important;
+}

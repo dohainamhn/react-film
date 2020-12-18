@@ -1,0 +1,22 @@
+.advertisement{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    height: 100%;
+    position: absolute;
+    background-color: rgba($color: #000000, $alpha: .7);
+    &__number{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 10%;
+        height: 17%;
+        border-radius: 50%;
+        font-size: 20px;
+        border: 2px solid;
+    }
+}

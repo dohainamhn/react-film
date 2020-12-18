@@ -1,0 +1,56 @@
+.topFilm{
+    color: #ffff;
+    width: 100%;
+    background-color: rgba($color: #000000, $alpha: 0.3);
+    >p{
+        color: #cdcdcd;
+        font-size: 20px;
+        padding: 10px;
+        font-weight: 700;
+        text-align: center;
+    }
+    ul{
+        overflow-y: scroll;
+        max-height: 700px;
+        width: 100%;
+        li{
+            a{
+                display: flex;
+                padding: 10px 5px;
+                border-top: 1px solid #ffffff1f;
+                img{
+                    width: 30%;
+                }
+                .topFilm__item__info{
+                    padding: 5px;
+                    flex-grow: 1;
+                    :first-child{
+                        color: #cdcdcd;
+                        font-weight: 600;
+                        font-size: 14px;
+                    }
+                    p{
+                        margin:5px 0;
+                        font-size: 14px;
+                        font-weight: 400;
+                        color: #cdcdcd;
+                    }
+                    .topFilm__item__info__vote{
+                        i{
+                            margin-right: 5px;
+                            color: rgb(228, 228, 28);
+                        }
+                    }
+                }
+            }
+        }:hover a .topFilm__item__info p{
+            color: #ffff ;
+        }
+    }::-webkit-scrollbar{
+        display: none;
+    }
+}
+
+a {
+    color: #cdcdcd;
+}

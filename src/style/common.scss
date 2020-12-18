@@ -1,0 +1,29 @@
+$background-color: #101010;
+$header-color: #181818;
+$primaru-color: #CDCDCD;
+
+
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+ }
+
+body {
+    font-family: "Poppins", sans-serif;
+    color: $primaru-color;
+    line-height: 1.4;
+  }
+a {
+    text-decoration: none;
+    color: $primaru-color;
+}
+

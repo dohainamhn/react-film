@@ -1,0 +1,97 @@
+.listFilm__item{
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    a{
+        width: 94%;
+        text-decoration: none;
+        padding-bottom: 162%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        .a123{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            .listFilm__item__img{
+                width: 100%;
+                height: 90%;
+                position: relative;
+                .listFilm__item__playIcon{
+                    position: absolute;
+                    height: 100%;
+                    align-items: center;
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    .overlay{
+                        display: none;
+                        width: 100%;
+                        height: 100%;
+                        position: absolute;
+                        background-color: rgba(0,0,0,0.3);
+                    }
+                    i{
+                        display: none;
+                        font-size: 40px;
+                        color: #ffff;
+                        padding: 15px 10px 15px 20px;
+                        border-radius: 50%;
+                        background-color: rgba(0,0,0,.6);
+                    }
+                }
+                .listFilm__item__star{
+                    display: flex;
+                    justify-content: center;
+                    font-size: 15px;
+                    i{
+                        background-color: rgba(0,0,0,0.5);
+                        border-radius: 10%;
+                        padding: 5px;
+                        color: rgb(201, 201, 5);
+                        p{
+                            margin-top:5px;
+                            text-align: center;
+                            
+                        }
+                    }
+                }
+            }
+            .listFilm__item__info{
+                width: 100%;
+                flex-grow: 1;
+                margin-bottom: 10px;
+                p:first-child{
+                    font-weight: 700;
+                }
+                p{
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    margin-top: 5px;
+                    color: rgba(255,255,255,.7);
+                }
+            }
+        }
+    }
+}
+.listFilm__item:hover a .a123 .listFilm__item__playIcon .overlay{
+    display: block;
+}
+.listFilm__item:hover a .a123 .listFilm__item__playIcon i{
+    display: block;
+}
+.listFilm__item:hover a .a123 .listFilm__item__info p{
+    color: rgba(255,255,255);
+}
+@media only screen and (max-width: 740px){
+    .listFilm__item{
+        width: 50%;
+        a{
+            width: 93%;
+        }
+    }
+}

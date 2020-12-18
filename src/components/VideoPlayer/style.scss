@@ -1,0 +1,269 @@
+.container-player {
+    width: 100%;
+    // height: 55rem;
+    background-color: rgb(37, 36, 36);
+
+
+    .box-video {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+        &:hover > .controls {
+            bottom: 0;
+        }
+
+        i{
+            cursor: pointer;
+        }
+        .controls {
+            position: absolute;
+            right: 0;
+            left: 0;
+            bottom: -60px;
+            // margin: 0 3rem;
+            transition: all .4s;
+            // background-color: rgba(255,255,255,.1);
+            .container-progress {
+                background-color: gray;
+                display: flex;
+                cursor: pointer;
+                border-radius: 10px;
+                .progress {
+                    border-radius: 10px;
+                    flex-basis: 0;
+                    background-color: #81B29A;
+                    // transition: all .1s;
+                    height: 0.5rem;
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+
+                    &:hover::before {
+                        opacity: 1;
+                        transform: scale(1)
+                    }
+                    &::before {
+                        content: "";
+                        width: 1rem;
+                        height: 1rem;
+
+                        background-color: yellow;
+                        position: absolute;
+                        border-radius: 50%;
+                        right: -5px;
+
+                        opacity: 0;
+                        transition: all .2s;
+                        transform: scale(0);
+
+                    }
+                }
+            }
+            .btn-volum, .btn-play, .fullsceen{
+                display: flex;
+                align-items: center;
+                flex-basis: calc((100%/12)*4) ;
+            }
+            .btn-play {
+                justify-content: center;
+                font-size: 2rem;
+                .current-time {
+                    font-size: 1.4rem;
+                    margin-right: 2rem;
+                }
+                .duration-time {
+                    font-size: 1.4rem;
+                    margin-left: 2rem;
+                }
+                .icon-play {
+                    .far{
+                        font-size: 3.5rem;
+                    }
+                    margin: 0 2rem;
+                }
+            }
+            .fullsceen {
+                justify-content: flex-end;
+                font-size: 1.8rem;
+            }
+            .btn-volum {
+                font-size: 1.8rem;
+                width: 1rem;
+                .fas {
+                    margin-right: 1rem;
+                }
+            }
+            .btn-container {
+                padding: 1rem 1rem;
+                background-color: rgba(37, 36, 36,.5);
+                width: 100%;
+                display: flex;
+            }
+
+        }
+    }
+}
+
+
+
+video {
+    outline: none;
+
+}
+
+.fa-forward,.fa-backward{
+    opacity: 1;
+    transition: all .4s;
+    transform: scale(1);
+}
+
+.fa-backward:active,.fa-forward:active {
+    transform: scale(1.5);
+    opacity: 0;
+}
+
+.far {
+    transition: all .4s;
+    transform: scale(1);
+}
+.far:active {
+    transform: scale(1.2);
+
+}
+
+
+// input[type="range"] {
+// 	height: 20%;
+//     outline: none;
+
+// }
+
+
+
+.dashed-loading {
+   position: absolute;
+   height: 50px;
+   top: 50%;
+   left: 47%;
+   transform: translate(-50%,-50%);
+}
+
+.dashed-loading:after,
+.dashed-loading:before {
+   content: "";
+   position: absolute;
+   top: 0;
+   left: 0;
+   border-radius: 50%;
+   width: 50px;
+   height: 50px;
+}
+
+.dashed-loading:before {
+   z-index: 5;
+   border: 3px dashed #ffeead;
+   border-left: 3px solid transparent;
+   border-bottom: 3px solid transparent;
+   -webkit-animation: dashed 1s linear infinite;
+   animation: dashed 1s linear infinite;
+}
+
+.dashed-loading:after {
+   z-index: 10;
+   border: 3px solid #81B29A;
+   border-left: 3px solid transparent;
+   border-bottom: 3px solid transparent;
+   -webkit-animation: dashed 1s ease infinite;
+   animation: dashed 1s ease infinite;
+
+}
+
+@keyframes dashed {
+   to {
+      transform: rotate(360deg);
+   }
+}
+
+video::-webkit-media-controls {
+    display:none !important;
+  }
+
+.test {
+      bottom: -60px !important;
+
+}
+
+.custom-volume {
+    position: relative;
+    .input {
+        -webkit-appearance: none;
+        outline: none;
+        height: 7px;
+        width: 12rem;
+        position: absolute;
+        z-index: 2;
+        top: -5px;
+        background-color: transparent;
+    }
+    .progress-volume {
+        position: absolute;
+        height: 7px;
+        width: 11.5rem;
+        background-color: rgb(145, 145, 145);
+        z-index: 1;
+        top: -3px;
+        left: 3px;
+        border-radius:50px ;
+        .fill {
+        height: 7px;
+        width: 0;
+        background-color: #81B29A;
+        position: absolute;
+        border-radius: inherit ;
+        // transition: all .2s;
+        }
+    }
+    .input::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 12px;
+        height: 12px;
+        background: yellow;
+        border-radius: 50%;
+        cursor: pointer;
+        box-shadow: 0 0 0 0 rgba($color:yellow, $alpha: 0);
+        transition: all .3s;
+      }
+      .input::-webkit-slider-thumb:hover {
+          box-shadow: 0 0 0 7px rgba($color:yellow, $alpha: 0.4);
+      }
+
+}
+// mobile
+@media (max-width: 37.5em){
+    .progress-volume, .custom-volume {
+        display: none;
+    }
+    .container-player .box-video .controls .btn-play .duration-time {
+        font-size: 1.3rem;
+        margin-left:1rem;
+
+    }
+    .container-player .box-video .controls .btn-play .current-time {
+        font-size: 1.3rem;
+        margin-right: 1rem;
+    }
+
+    .container-player .box-video .controls .btn-play .icon-play {
+        margin: 0 1rem;
+        font-size: 2rem;
+    }
+
+}
+@media (max-width: 56.25em)
+{
+
+}

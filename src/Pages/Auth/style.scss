@@ -1,0 +1,67 @@
+.auth {
+    height: calc(100vh - 7.9rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.container__auth {
+    width: 500px;
+    height: 450px;
+    background-color: #151515;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .logo {
+        margin-top: 2rem;
+        width: 18rem;
+        img {
+            width: 100%;
+        }
+    }
+    .btn {
+        text-align: center;
+        padding-bottom: 3rem;
+        // border-bottom: 1px solid #5C5C5C;
+    }
+    form {
+        margin: auto 0;
+    }
+    button {
+        border-radius: 5px;
+        width: 100%;
+        padding: 1rem 0;
+        background-color:rgba(255,255,255,.2);
+        transition: all .5s linar;
+        &:hover {
+            background-color: #5c5c5c ;
+        }
+    }
+    .redirect {
+        text-align: center;
+        // padding-top: 2rem;
+        &__auth {
+            color: #6EC282;
+        }
+    }
+    form {
+        width: 70%;
+    }
+    .err {
+        width: 70%;
+        padding: 0.5rem 1rem;
+        margin-bottom: 1rem;
+        border-radius: 5px;
+        text-align: center;
+        background-color: rgb(194, 44, 44);
+    }
+    .success{
+        width: 70%;
+        padding: 0.5rem 1rem;
+        margin-bottom: 1rem;
+        border-radius: 5px;
+        text-align: center;
+        background-color: rgb(10, 175, 10);
+    }
+}

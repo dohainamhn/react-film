@@ -1,0 +1,257 @@
+.watchFilm{
+    &__video{
+        video{
+            outline: none;
+        }
+        position: relative;
+        z-index: 1;
+        img{
+            width: 100%;
+            object-fit: cover;
+            z-index: 1;
+        }
+        &__overlay{
+            background-color: rgba($color: #000000, $alpha: 0.2);
+            z-index: 2;
+            display: none;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            position: absolute;
+            justify-content: center;
+            align-items: center;
+            &__playIcon{
+                width: 10%;
+                .stroke-solid{
+                    stroke-dashoffset: 300;
+                    stroke-dashArray: 300;
+                    stroke-width: 4px;
+                    transition: stroke-dashoffset 0.8s ease, 
+                    opacity 1s ease;
+                }
+                .icon {
+                    transform: scale(.8);
+                    transform-origin: 50% 50%;
+                    transition: transform 200ms ease-out;
+                  }
+            }
+        }
+    }:hover{
+        .watchFilm__video__overlay{
+            display: flex;
+        }:hover{
+            .watchFilm__video__overlay__playIcon{
+                .stroke-solid {
+                    opacity: 1;
+                    stroke-dashoffset: 600;
+                    }
+                    .icon {
+                    transform: scale(.9);
+                    }
+            }
+        }
+        
+    }
+    &__vieName,&__engName{
+        margin: 10px 0;
+        font-size: 2rem;
+    }
+    &__engName{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-weight: 400;
+        opacity: 0.8;
+        &__favorite{
+            display: flex;
+            font-size: 15px;
+            align-items: center;
+            color: #da4d4d;
+            i{
+                margin: 0 5px 5px 0;
+            }
+            p{
+                font-weight: 700;
+            }
+        }
+    }
+    &__vieName{
+        font-weight: 700;
+        display: flex;
+        justify-content: space-between;
+        select{
+            outline: none;
+            cursor: pointer;
+            option{
+                color: black;
+            }
+        }
+    }
+    &__vote{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+       &__right{
+        font-size: 2rem;
+        display: flex;
+        align-items: center;
+        margin: 20px 0;
+        p{
+            width: max-content;
+            border-radius: 3%;
+            padding: 5px 10px;
+            margin-right: 5px;
+            color: #000;
+            background: linear-gradient(141deg,#ebd15f 0,#dbb043 100%);
+        }
+        &__star{
+            margin:0 10px;
+            display: flex;
+            align-items: center;
+            i{
+                padding: 0.1rem;
+            }
+        }
+       }
+       &__left{
+        &__error{
+            display: flex;
+            font-size: 15px;
+            align-items: center;
+            color: #a5c41c;
+            cursor: pointer;
+            i{
+                margin: 0 5px 5px 0;
+            }
+            p{
+                font-weight: 700;
+            }
+        }
+       }
+    }
+    &__yourVote{
+        font-size: 20px;
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        &__item{
+            .yellow{
+              color: #dbb043;  
+            }
+        }
+    }
+    &__trailer{
+        margin: 10px 0 ;
+        font-size: 2rem;
+        padding: 5px 10px;
+        display: flex;
+        align-items: center;
+        border-radius: 3%;
+        background-color: rgb(7, 63, 28);
+        i{
+            margin-left: 10px;
+        }
+
+    }
+    &__filmInfo{
+        margin: 20px 0;
+        width: 100%;
+        overflow: hidden;
+        &__top{
+            cursor: pointer;
+            display: flex;
+            font-size: 2rem;
+            align-items: center;
+            margin-bottom: 10px;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;     
+            -webkit-tap-highlight-color: transparent;
+            -khtml-tap-highlight-color: transparent;
+            -moz-tap-highlight-color: transparent;
+            -ms-tap-highlight-color: transparent;            
+             span{
+                :active{
+                    display: none;
+                }
+                color: red;
+                margin-left: 10px;
+                font-size: 2.5rem;
+            }
+        }
+        &__bottom{
+            margin:0 10px;
+            height: 0;
+            font-size: 1.5rem;
+            &__description{
+                line-height: 1.5;
+            }
+            li{
+                margin: 15px 0;
+            }
+            &__actors{
+                display: flex;
+                flex-wrap: wrap;
+                li{
+                    overflow-wrap: break-word;
+                    margin: 10px 10px; 
+                    width: 10%;
+                    img{
+                        width: 50%;
+                        border-radius: 50%;
+                    }
+                }
+                
+            }
+        }
+    }
+}
+
+.activeInfo{
+    height: max-content;
+}
+
+@media only screen and (max-width: 1200px){
+    .watchFilm__video__overlay{
+        display: flex;
+        background-color: rgba(0,0,0,0.1);
+        .watchFilm__video__overlay__playIcon{
+            .stroke-solid {
+                stroke: #ffff;
+                stroke-dashoffset: 300;
+                stroke-dashArray: 300;
+                opacity: 1;
+                stroke-dashoffset: 600;
+                }
+                .icon {
+                transform: scale(.9);
+                }
+        }
+    }
+}
+
+@media only screen and (max-width: 1200px){
+    .watchFilm__main{
+        margin: 0 10px;
+    }
+    .watchFilm{
+        &__vote{
+            overflow: hidden;
+        }
+    }
+    .watchFilm__filmInfo__bottom__actors{
+        li{
+            width: 22% ;
+        }
+    }
+}
+@media only screen and (max-width: 550px){
+    .watchFilm__vote__right__star{
+        display: none;
+    }
+}
