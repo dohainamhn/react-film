@@ -11,7 +11,7 @@ function HotFilm(props) {
       <ul>
         {films.map((item) => (
           <li key={item._id}>
-            <Link to={`/watch-film/${item._id}`}>
+            <Link to={`/react-film/watch-film/${item._id}`}>
               <img src={item.img} alt="img" />
               <div className="topFilm__item__info">
                 <p>{item.name}</p>

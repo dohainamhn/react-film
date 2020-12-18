@@ -9,7 +9,7 @@ function ListFilmContainer(props) {
   return (
     <div className="ListFilmContainer">
       <div className="ListFilmContainer__title">
-        <a href="/">
+        <a href="/react-film">
           <span>{title}</span>
           <i className="fas fa-caret-right"></i>
         </a>
