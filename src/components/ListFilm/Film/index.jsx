@@ -5,7 +5,7 @@ function Film(props) {
   const { film } = props;
   return (
     <div className="listFilm__item">
-      <Link to={`/watch-film/${film._id}`}>
+      <Link to={`/react-film/watch-film/${film._id}`}>
         <div className="a123">
           <div
             style={{
