@@ -46,11 +46,11 @@ function App() {
   },[submit])
   useEffect(() => {
     if (
-      location.pathname === "/auth/sign-in" ||
-      location.pathname === "/auth/sign-up" ||
-      location.pathname === "/member/user-infor" ||
-      location.pathname === "/member/favorite-film" ||
-      location.pathname === "/member/change-password"
+      location.pathname === "/react-film/auth/sign-in" ||
+      location.pathname === "/react-film/auth/sign-up" ||
+      location.pathname === "/react-film/member/user-infor" ||
+      location.pathname === "/react-film/member/favorite-film" ||
+      location.pathname === "/react-film/member/change-password"
     ) {
       setUnRight(true);
       return;

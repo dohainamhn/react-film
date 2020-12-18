@@ -18,7 +18,7 @@ function NavBar(props) {
       data: e.target.input.value
     }).then((res) => {
       submit(res.data)
-      history.push('/search')
+      history.push('/react-film/search')
       e.target.input.value = ""
     })
   }
