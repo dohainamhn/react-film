@@ -75,7 +75,7 @@ function NavBar(props) {
                       <li className="smenu__item" key={category._id}>
                         <Link
                           className="smenu__link"
-                          to={`/filter/genres=${category._id}`}
+                          to={`/react-film/filter/genres=${category._id}`}
                         >
                           {category.name}
                         </Link>
@@ -94,7 +94,7 @@ function NavBar(props) {
                       return (
                         <li className="smenu__item" key={country._id}>
                           <Link
-                            to={`/filter/country=${country._id}`}
+                            to={`/react-film/filter/country=${country._id}`}
                             className="smenu__link"
                           >
                             {country.name}
