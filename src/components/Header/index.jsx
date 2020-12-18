@@ -48,7 +48,7 @@ function NavBar(props) {
       <div className="container">
         <div className="row">
           <div className="col col-img">
-            <NavLink to="/" className="nav__logo">
+            <NavLink to="/react-film" className="nav__logo">
               <img src="https://i.imgur.com/lGh30No.png" alt="logo" />
             </NavLink>
           </div>
@@ -105,17 +105,17 @@ function NavBar(props) {
                 </ul>
               </li>
               <li className="nav__item">
-                <NavLink to="/filter/sort=votes" className="nav__link">
+                <NavLink to="/react-film/filter/sort=votes" className="nav__link">
                   Phim Hot
                 </NavLink>
               </li>
               <li className="nav__item">
-                <NavLink to="/filter/year=2020" className="nav__link">
+                <NavLink to="/react-film/filter/year=2020" className="nav__link">
                   Phim Mới
                 </NavLink>
               </li>
               <li className="nav__item">
-                <NavLink to="/movies-shown-in-theater" className="nav__link">
+                <NavLink to="/react-film/movies-shown-in-theater" className="nav__link">
                   Phim Chiếu Rạp
                 </NavLink>
               </li>
@@ -146,13 +146,13 @@ function NavBar(props) {
                     <ul className="menu-user">
                       <span className="display-name">{user.userName}</span>
                       <li className="user-item">
-                        <Link className="user-link" to="/member/user-infor">
+                        <Link className="user-link" to="/react-film/member/user-infor">
                           <i className="far fa-user"></i>
                           Thông tin cá nhân
                         </Link>
                       </li>
                       <li className="user-item">
-                        <Link className="user-link" to="/">
+                        <Link className="user-link" to="/react-film">
                           <i className="fas fa-film"></i>
                           tủ phim của bạn
                         </Link>
@@ -172,7 +172,7 @@ function NavBar(props) {
                     </ul>
                   </>
                 ) : (
-                    <NavLink className="btn-login" to="/auth/sign-in">
+                    <NavLink className="btn-login" to="/react-film/auth/sign-in">
                       Login
                     </NavLink>
                   )}

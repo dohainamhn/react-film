@@ -69,23 +69,23 @@ function App() {
             style={{ width: unRight && "100%" }}
           >
             <Switch>
-              <Route path="/auth" component={Auth} />
-              <Route path="/watch-film/:id">
+              <Route path="/react-film/auth" component={Auth} />
+              <Route path="/react-film/watch-film/:id">
                 <WatchFilm />
               </Route>
-              <Route exact path="/search">
+              <Route exact path="/react-film/search">
               <FilterFilm  searchFilm={submit} />
               </Route>
-              <Route path="/filter/:query">
+              <Route path="/react-film/filter/:query">
                 <FilterFilm films={films} />
               </Route>
-              <Route path="/movies-shown-in-theater">
+              <Route path="/react-film/movies-shown-in-theater">
                 <FilterFilm />
               </Route>
-              <Route exact path="/">
+              <Route exact path="/react-film">
                 <Home films={films} />
               </Route>
-              {user && <Route path="/member" component={Member} />}
+              {user && <Route path="/react-film/member" component={Member} />}
               <Route exact path="*">
                 <ErrorPage />
               </Route>
