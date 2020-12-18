@@ -18,7 +18,6 @@ import Member from "./Pages/Member";
 import Footer from "./Pages/Footer";
 
 function App() {
-  const [data, setData] = useState([]);
   const [films, setFilms] = useState([]);
   const [unRight, setUnRight] = useState(false);
   const [user, setUser] = useState(null);
@@ -26,12 +25,6 @@ function App() {
   const [submit,setSubmit] = useState(null)
 
   useEffect(() => {
-    fetch("https://5f8a739718c33c0016b31771.mockapi.io/Film")
-      .then((res) => res.json())
-      .then((res) => {
-        setData(res);
-        setFilms(res.slice(0, 7));
-      });
     const token = localStorage.getItem("token");
     if (token) {
       console.log("ok2");

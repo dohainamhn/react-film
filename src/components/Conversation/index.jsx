@@ -6,7 +6,7 @@ import userContext from "../../context/UserContext";
 import io from "socket.io-client";
 import conversationApi from "../../api/conversationApi";
 import Loadding from "../Loadding";
-const socket = io(process.env.REACT_APP_API_URL, { transports: ["websocket"] });
+const socket = io("https://hidden-escarpment-17901.herokuapp.com/", { transports: ["websocket"] });
 
 function Conversation() {
   const [imageUrl, setImageUrl] = useState([]);
