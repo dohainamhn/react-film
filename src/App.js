@@ -82,7 +82,7 @@ function App() {
               <Route path="/react-film/movies-shown-in-theater">
                 <FilterFilm />
               </Route>
-              <Route exact path="/react-film">
+              <Route exact path="/">
                 <Home films={films} />
               </Route>
               {user && <Route path="/react-film/member" component={Member} />}

@@ -66,7 +66,7 @@ function NavBar(props) {
             <ul className="nav__menu">
               <li className="nav__item nav__hover">
                 <label htmlFor="checkbox1" className="nav__link">
-                  Thể Loại <i className="fas fa-caret-down"></i>
+                  Genres <i className="fas fa-caret-down"></i>
                 </label>
                 <input type="checkbox" id="checkbox1" />
                 <ul className="nav__smenu">
@@ -85,7 +85,7 @@ function NavBar(props) {
               </li>
               <li className="nav__item nav__hover">
                 <label htmlFor="checkbox2" className="nav__link">
-                  Quốc Gia <i className="fas fa-caret-down"></i>
+                  Countries <i className="fas fa-caret-down"></i>
                 </label>
                 <input type="checkbox" id="checkbox2" />
                 <ul className="nav__smenu">
@@ -106,17 +106,17 @@ function NavBar(props) {
               </li>
               <li className="nav__item">
                 <NavLink to="/react-film/filter/sort=votes" className="nav__link">
-                  Phim Hot
+                  HotFilms
                 </NavLink>
               </li>
               <li className="nav__item">
                 <NavLink to="/react-film/filter/year=2020" className="nav__link">
-                  Phim Mới
+                  NewFilms
                 </NavLink>
               </li>
               <li className="nav__item">
                 <NavLink to="/react-film/movies-shown-in-theater" className="nav__link">
-                  Phim Chiếu Rạp
+                  Movies shown in theater
                 </NavLink>
               </li>
             </ul>
@@ -148,13 +148,13 @@ function NavBar(props) {
                       <li className="user-item">
                         <Link className="user-link" to="/react-film/member/user-infor">
                           <i className="far fa-user"></i>
-                          Thông tin cá nhân
+                          Person Infomation
                         </Link>
                       </li>
                       <li className="user-item">
                         <Link className="user-link" to="/react-film">
                           <i className="fas fa-film"></i>
-                          tủ phim của bạn
+                          Favorite Film
                         </Link>
                       </li>
                       <li className="user-item">
@@ -166,7 +166,7 @@ function NavBar(props) {
                             window.location.reload();
                           }}
                         >
-                          Đăng Xuất
+                          Logout
                         </span>
                       </li>
                     </ul>
